@@ -7,7 +7,7 @@ public class Serialization {
     public static void main(String[] args) {
        Animal animal = new Animal("Cat","Mammal");
 
-        try (FileOutputStream fileOut = new FileOutputStream("animal.ser");
+        try (FileOutputStream fileOut = new FileOutputStream("animal.json");
              ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
             out.writeObject(animal);
         } catch (Exception e) {

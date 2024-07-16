@@ -7,7 +7,7 @@ public class Deserialization {
     public static void main(String[] args) {
        Animal animal = null;
 
-        try (FileInputStream fileIn = new FileInputStream("animal.ser");
+        try (FileInputStream fileIn = new FileInputStream("animal.json");
              ObjectInputStream in = new ObjectInputStream(fileIn)) {
             animal = (Animal) in.readObject();
         } catch (Exception e) {
